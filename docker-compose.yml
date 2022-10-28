@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  libregrammar:
+    container_name: libregrammar
+    #build: ./libregrammar # For building it yourself
+    image: melashri/libregrammar # For using the prebuilt image
+    ports:
+        - 8081:8081  # Using default port from the image
+    environment:
+        - langtool_languageModel=/ngrams  # OPTIONAL: Using ngrams data
+        - Java_Xms=512m  # OPTIONAL: Setting a minimal Java heap size of 512 mib
+        - Java_Xmx=1g  # OPTIONAL: Setting a maximum Java heap size of 1 Gib
+    volumes:
+        - <path_to_ngrams_data>:/ngrams
