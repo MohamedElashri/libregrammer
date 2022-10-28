@@ -53,8 +53,6 @@ RUN addgroup -S libregrammar && adduser -S libregrammar -G libregrammar
 
 COPY --chown=libregrammar start.sh start.sh
 
-RUN touch config.properties
-
 COPY --chown=libregrammar config.properties config.properties
 
 USER libregrammar
