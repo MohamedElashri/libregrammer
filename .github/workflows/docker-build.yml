@@ -11,4 +11,5 @@ jobs:
         name: melashri/libregrammer
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+        context: .
         tags: "latest,v5.1"
